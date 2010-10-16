@@ -1,0 +1,8 @@
+h1. Avro-Jruby
+
+Avro-Jruby makes use of the Java avro API to read and write avro data. The goal here is to provide as straight-forward and brain-dead simple an interface as possible.
+
+h2. Tools
+
+catavro: Spews avro data from an avro to standard out as text
+
