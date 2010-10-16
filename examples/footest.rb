@@ -1,6 +1,5 @@
 #!/usr/bin/env jruby
 
-$: << '/home/jacob/Programming/avro-jruby/lib' # ...
 require 'avro-jruby' ; include AvroJruby::Write
 
 schema_str = "{
