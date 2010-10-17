@@ -3,7 +3,7 @@
 require 'rubygems'
 require 'wukong'
 require 'wukong/schema'
-$: << '/home/jacob/Programming/avro-jruby/lib'
+
 require 'avro-jruby' ; include AvroJruby::Write
 
 class ComicBook < TypedStruct.new(

@@ -1,5 +1,6 @@
 #!/usr/bin/env jruby
 
+$: << '/home/jacob/Programming/avro-jruby/lib'
 require 'avro-jruby' ; include AvroJruby::Write
 
 schema_str = "{
@@ -20,10 +21,14 @@ record = {
   :num_groups => "1"
 }
 
-writer = AvroFileWriter.new(schema_str, 'foo.avro')
-writer.write(record)
-writer.close
+# writer = AvroFileWriter.new(schema_str, 'foo.avro')
+# writer.write(record)
+# writer.close
+# 
+# writer = AvroStdoutWriter.new(schema_str)
+# writer.write(record)
+# writer.close
 
-writer = AvroStdoutWriter.new(schema_str)
+writer = AvroHdfsWriter.new(schema_str, '/tmp/foo.avro')
 writer.write(record)
 writer.close
