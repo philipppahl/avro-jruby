@@ -33,6 +33,10 @@ record = {
 # writer.write(record)
 # writer.close
 
-reader = AvroJruby::Read::AvroFileReader.new('foo.avro')
-reader.each{|record| puts record}
-reader.close
+# reader = AvroJruby::Read::AvroFileReader.new('foo.avro')
+# reader.each{|record| puts record}
+# reader.close
+
+# reader = AvroJruby::Read::AvroHdfsReader.new('/tmp/foo.avro')
+# reader.each{|record| puts record}
+# reader.close

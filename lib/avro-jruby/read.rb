@@ -9,6 +9,6 @@ module AvroJruby
   module Read
     autoload :AbstractAvroReader, 'avro-jruby/read/base'
     autoload :AvroFileReader,     'avro-jruby/read/filereader'
-    # autoload :AvroHdfsReader,     'avro-jruby/read/hdfsreader'
+    autoload :AvroHdfsReader,     'avro-jruby/read/hdfsreader'
   end
 end

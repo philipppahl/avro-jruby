@@ -7,14 +7,11 @@ $CLASSPATH << ENV['HADOOP_HOME']+'/conf'
 
 module AvroJruby::Write
 
-  #
-  # I'll write this someday
-  #
   class AvroHdfsWriter < AbstractAvroWriter
     attr_writer :config, :hdfs, :hdfspath
     
     def initialize schema, hdfspath
-      @config   = org.apache.hadoop.conf.Configuration.new()
+      @config   = org.apache.hadoop.conf.Configuration.new
       @hdfs     = org.apache.hadoop.fs.FileSystem.get(@config)
       @hdfspath = org.apache.hadoop.fs.Path.new(hdfspath)
       super(schema)
