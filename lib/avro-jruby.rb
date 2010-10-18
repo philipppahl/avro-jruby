@@ -11,5 +11,6 @@ Dir["#{avro_jar_dir}/*.jar"].each{|jar| require jar}
 
 module AvroJruby
   autoload :Write, 'avro-jruby/write'
+  autoload :Read,  'avro-jruby/read'
 end
 

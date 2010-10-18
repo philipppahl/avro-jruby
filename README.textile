@@ -4,5 +4,5 @@ Avro-Jruby makes use of the Java avro API to read and write avro data. The goal 
 
 h2. Tools
 
-catavro: Spews avro data from an avro to standard out as text
+catavro: Spews avro data from an avro file to standard out as text
 

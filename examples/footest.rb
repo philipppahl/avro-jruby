@@ -29,6 +29,10 @@ record = {
 # writer.write(record)
 # writer.close
 
-writer = AvroHdfsWriter.new(schema_str, '/tmp/foo.avro')
-writer.write(record)
-writer.close
+# writer = AvroHdfsWriter.new(schema_str, '/tmp/foo.avro')
+# writer.write(record)
+# writer.close
+
+reader = AvroJruby::Read::AvroFileReader.new('foo.avro')
+reader.each{|record| puts record}
+reader.close
